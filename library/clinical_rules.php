@@ -865,7 +865,7 @@ function test_rules_clinic($provider = '', $type = '', $dateTarget = '', $mode =
                             $actionArray = resolve_action_sql($rowRule['id'], '1');
                             foreach ($actionArray as $action) {
                                 $action_plus = $action;
-                                $action_plus['due_status'] = $reminder_due;  
+                                $action_plus['due_status'] = $reminder_due;
                                 $action_plus['pid'] = $rowPatient['pid'];
                                 $action_plus['rule_id'] = $rowRule['id'];
                                 $results = reminder_results_integrate($results, $action_plus);
@@ -973,7 +973,6 @@ function test_rules_clinic($provider = '', $type = '', $dateTarget = '', $mode =
                                 $actionArray = resolve_action_sql($rowRule['id'], $i);
                                 foreach ($actionArray as $action) {
                                     $action_plus = $action;
-                                    $action_plus['due_status'] = "not_due";
                                     //$action_plus['due_status'] = "not_due"; // fix by hanksterr7 to get proper status to show
                                     if ($dateCounter == 1) {
                                         $action_plus['due_status'] = "not_due";
